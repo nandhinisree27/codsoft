@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Demo</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #9fe3dc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .quiz-box {
+        background: #e9fffd;
+        width: 600px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        position: relative;
+    }
+
+    .progress {
+        height: 6px;
+        background: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        width: 60%;
+        height: 100%;
+        background: #00b3a4;
+    }
+
+    h4 {
+        text-align: center;
+        color: #666;
+        margin: 10px 0;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .option {
+        background: white;
+        border-radius: 8px;
+        padding: 12px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .option span {
+        background: #ccc;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 28px;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .option.active {
+        background: #00b3a4;
+        color: white;
+        border-color: #00897b;
+    }
+
+    .option.active span {
+        background: white;
+        color: #00b3a4;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <h4>Question 6/13</h4>
+
+    <h3>
+        HAVE YOU PRACTICED SPORT OR ANY PHYSICAL ACTIVITY OUT OF YOUR
+        WORKING HOURS AT LEAST 30 MIN OR MORE DURING THE LAST MONTH?
+    </h3>
+
+    <div class="option" onclick="selectOption(this)">
+        <span>A</span> 3 times or more per week
+    </div>
+
+    <div class="option" onclick="selectOption(this)">
+        <span>B</span> 1 or 2 times per week
+    </div>
+
+    <div class="option" onclick="selectOption(this)">
+        <span>C</span> Less than 4 times per month
+    </div>
+
+    <div class="option" onclick="selectOption(this)">
+        <span>D</span> I don’t practise sport during the month
+    </div>
+</div>
+
+<script>
+    function selectOption(selected) {
+        let options = document.querySelectorAll('.option');
+        options.forEach(opt => opt.classList.remove('active'));
+        selected.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

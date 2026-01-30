@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator Demo</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+        background: #2d8cf0;
+        padding: 20px;
+        border-radius: 15px;
+        width: 260px;
+    }
+
+    .display {
+        background: #eaf6ff;
+        height: 50px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        text-align: right;
+        font-size: 32px;
+        padding: 5px 10px;
+        overflow: hidden;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background: #1f6fd6;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:active {
+        background: #155bb5;
+    }
+
+    .operator {
+        background: #0b5ed7;
+    }
+
+    .equal {
+        background: #084298;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display" id="display">0</div>
+
+    <div class="buttons">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button class="operator" onclick="press('+')">+</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button class="operator" onclick="press('-')">−</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button class="equal" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script>
+    let display = document.getElementById("display");
+
+    function press(value) {
+        if (display.innerText === "0") {
+            display.innerText = value;
+        } else {
+            display.innerText += value;
+        }
+    }
+
+    function calculate() {
+        try {
+            display.innerText = eval(display.innerText);
+        } catch {
+            display.innerText = "Error";
+        }
+    }
+</script>
+
+</body>
+</html>

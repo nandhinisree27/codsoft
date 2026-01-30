@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+header nav a:hover {
+    color: #00aaff;
+}
+
+/* HERO */
+.hero {
+    background: #555;
+    color: #fff;
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 10px 25px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-img img {
+    width: 300px;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 280px;
+}
+
+.about-text {
+    margin-left: 40px;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-text button {
+    padding: 10px 25px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+}
